@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JS Clickz Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to right, #e0f7fa, #80deea);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      color: #333;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 10px 30px;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #0097a7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .filter-bar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .filter-bar button {
+      margin: 5px;
+      padding: 8px 16px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: default;
+      background-color: #4dd0e1;
+      color: #fff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 30px;
+      animation: slideIn 0.8s ease;
+    }
+
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.03);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      border-radius: 15px;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .photo-card img {
+        height: 180px;
+      }
+    }
+
+    .description {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .photo-card:hover .description {
+      opacity: 1;
+    }
+
+    .insta-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .insta-link a {
+      color: #e91e63;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-button" href="index.html">Back</a>
+
+  <h1>My Photography Gallery</h1>
+
+  <div class="gallery">
+    <div class="photo-card nature">
+      <img src="images/charlie.jpg" alt="Cute puppy">
+      <div class="description">Cute puppy</div>
+    </div>
+    <div class="photo-card nature">
+      <img src="images/sunset.jpg" alt="One fine sunset">
+      <div class="description">One fine sunset</div>
+    </div>
+    <div class="photo-card nature">
+      <img src="images/nest.jpg" alt="A beautiful nest.">
+      <div class="description">A beautiful nest.</div>
+    </div>
+    <div class="photo-card nature">
+      <img src="images/js.jpg" alt="Raindrops on a leaf">
+      <div class="description">Raindrops on a leaf</div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/click.jpg" alt="Perfect click">
+      <div class="description">Perfect click</div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/brothers.jpg" alt="Brothers together">
+      <div class="description">Little Brothers</div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/butterfly.jpg" alt="Butterfly wings">
+      <div class="description">Butterfly wings</div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image1.jpg" alt="Butterfly wings">
+      <div class="description">Butterfly wings</div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image3.jpg" alt="Butterfly wings">
+      <div class="description"></div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image4.jpg" alt="Butterfly wings">
+      <div class="description"></div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image7.jpg" alt="Butterfly wings">
+      <div class="description"></div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image11.jpg" alt="Butterfly wings">
+      <div class="description"></div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image12.jpg" alt="Butterfly wings">
+      <div class="description"></div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image14.jpg" alt="Butterfly wings">
+      <div class="description"></div>
+    </div>
+    <div class="photo-card animals">
+      <img src="images/image15.jpg" alt="Butterfly wings">
+      <div class="description"></div>
+    </div>
+  </div>
+
+  <div class="insta-link">
+    <p>Follow me on <a href="https://www.instagram.com/_._js__._" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+  </div>
+</body>
+</html>
+

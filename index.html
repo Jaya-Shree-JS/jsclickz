@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JS Clickz - Welcome</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+   
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url('images/charlie.jpg'); /* ✅ Initial image */
+  background-size: cover;
+  background-position: center;
+  animation: backgroundSlide 20s infinite ease-in-out;
+}
+
+    @keyframes backgroundSlide {
+      0%, 100% { background-image: url('images/charlie.jpg'); }
+      33% { background-image: url('images/image12.jpg'); }
+      66% { background-image: url('images/image15.jpg'); }
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .gradient-text {
+      font-size: 50px;
+      font-weight: bold;
+      background: linear-gradient(to right, #f0d004, #dcdee0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      font-size: 20px;
+      color: #fff;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .js-clickz-btn {
+      margin-top: 30px;
+      padding: 18px 45px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      background: #81b141;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .js-clickz-btn:hover {
+      background: #778f98;
+      transform: scale(1.05);
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 22px;
+      margin: 0 10px;
+      transition: transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .about-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #57aa9c;
+      color: white;
+      padding: 10px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .about-link:hover {
+      background: #00796b;
+    }
+
+    @media (max-width: 600px) {
+      .gradient-text { font-size: 32px; }
+      .js-clickz-btn { font-size: 18px; padding: 12px 30px; }
+      .tagline { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="about-link" href="about.html">About</a>
+  <div class="overlay">
+    <h1 class="gradient-text">WELCOME...!!</h1>
+    <p class="tagline">Capturing moments through my lens – one click at a time.</p>
+    <button class="js-clickz-btn" onclick="location.href='gallery.html'">JS Clickz</button>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/_._js__._" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/your-username" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</body>
+</html>
